@@ -27,6 +27,7 @@ public class OrderControllerTest {
     private Order createTestOrder() {
         CustomerName name = new CustomerName.Builder()
                 .setFirstName("Siphokuhle")
+                .setMiddleName("Millior")
                 .setLastName("Nyana")
                 .build();
 
