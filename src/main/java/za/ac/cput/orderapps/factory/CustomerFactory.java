@@ -1,3 +1,9 @@
+/*
+Author : Siphokuhle Nyana
+25/04/26
+CustomerFactory
+ */
+
 package za.ac.cput.orderapps.factory;
 
 

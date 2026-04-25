@@ -1,3 +1,9 @@
+/*
+Author : Siphokuhle Nyana
+25/04/26
+CustomerController.jav
+ */
+
 package za.ac.cput.orderapps.controller;
 
 
@@ -7,7 +13,8 @@ import za.ac.cput.orderapps.domain.Customer;
 import za.ac.cput.orderapps.service.CustomerService;
 
 import java.util.List;
-
+@RestController
+@RequestMapping("/api/order")
 public class CustomerController {
     private final CustomerService service;
 
@@ -25,7 +32,7 @@ public class CustomerController {
         return service.read(id);
     }
 
-    @GetMapping
+    @GetMapping("/api/customers")
     public List<Customer> getAll() {
         return service.getAll();
     }

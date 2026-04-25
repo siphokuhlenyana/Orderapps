@@ -38,7 +38,7 @@ public class OrderServiceTest {
         Order order = new Order.Builder()
                 .setOrderId("1")
                 .setCustomerName(name)
-                .setAmount(200)
+                .setDate(25/04/26)
                 .build();
 
         Mockito.when(repository.findById("1")).thenReturn(Optional.of(order));

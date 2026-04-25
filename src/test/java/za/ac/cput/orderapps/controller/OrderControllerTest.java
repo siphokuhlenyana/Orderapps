@@ -1,4 +1,11 @@
+/*
+Author : Siphokuhle Nyana
+23/04/26
+OrderControllerTest
+ */
+
 package za.ac.cput.orderapps.controller;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -34,7 +41,7 @@ public class OrderControllerTest {
         return new Order.Builder()
                 .setOrderId("1")
                 .setCustomerName(name)
-                .setAmount(400)
+                .setDate(25/04/26)
                 .build();
     }
 

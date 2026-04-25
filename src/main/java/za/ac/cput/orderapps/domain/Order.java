@@ -3,6 +3,8 @@ package za.ac.cput.orderapps.domain;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "orders")
 public class Order {
@@ -13,24 +15,25 @@ public class Order {
     @Embedded
     private CustomerName customerName;
 
-    private double amount;
+   // private double amount;
+    private Date date;
 
     private Order(Builder builder) {
         this.orderId = builder.orderId;
         this.customerName = builder.customerName;
-        this.amount = builder.amount;
+        this.date = builder.date;
     }
 
     protected Order() {}
 
     public String getOrderId() { return orderId; }
     public CustomerName getCustomerName() { return customerName; }
-    public double getAmount() { return amount; }
+    public Date getDate() { return date; }
 
     public static class Builder {
         private String orderId;
         private CustomerName customerName;
-        private double amount;
+        private Date date;
 
         public Builder setOrderId(String orderId) {
             this.orderId = orderId;
@@ -42,15 +45,15 @@ public class Order {
             return this;
         }
 
-        public Builder setAmount(double amount) {
-            this.amount = amount;
-            return this;
-        }
+//        public Builder setDate(double date) {
+//            this.date = date;
+//            return this;
+//        }
 
         public Order build() {
             if (orderId == null || orderId.isEmpty()) return null;
             if (customerName == null) return null;
-            if (amount <= 0) return null;
+
 
             return new Order(this);
         }
