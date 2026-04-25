@@ -1,9 +1,11 @@
 /*
 Author : Siphokuhle Nyana
 25/04/26
-OrderServiceTest
+CustomerServiceTest
  */
+
 package za.ac.cput.orderapps.service;
+
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,8 +14,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import za.ac.cput.orderapps.domain.CustomerName;
-import za.ac.cput.orderapps.domain.Order;
-import za.ac.cput.orderapps.repository.OrderRepository;
+import za.ac.cput.orderapps.domain.Customer;
+
+import za.ac.cput.orderapps.repository.CustomerRepository;
+
 
 import java.util.Optional;
 
@@ -21,29 +25,30 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
-public class OrderServiceTest {
+public class CustomerServiceTest {
     @Mock
-    private OrderRepository repository;
+    private CustomerRepository repository;
 
     @InjectMocks
-    private OrderService service;
+    private CustomerService service;
 
     @Test
     void testRead() {
         CustomerName name = new CustomerName.Builder()
-                .setFirstName("John")
-                .setLastName("Doe")
+                .setFirstName("Mihle")
+                .setLastName("Nosilela")
                 .build();
 
-        Order order = new Order.Builder()
-                .setOrderId("1")
+        Customer customer = new Customer.Builder()
+                .setPatientID("PT1")
                 .setCustomerName(name)
-                .setAmount(200)
+                .setEmail("Mihle@nosilela.com")
+                .setMobileNumber("0123456789")
                 .build();
 
-        Mockito.when(repository.findById("1")).thenReturn(Optional.of(order));
+        Mockito.when(repository.findById("1")).thenReturn(Optional.of(customer));
 
-        Order result = service.read("1");
+        Customer result = service.read("1");
 
         assertNotNull(result);
     }
