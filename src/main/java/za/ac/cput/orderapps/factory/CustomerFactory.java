@@ -1,7 +1,7 @@
 /*
 Author : Siphokuhle Nyana
 25/04/26
-CustomerFactory
+CustomerFactory.java
  */
 
 package za.ac.cput.orderapps.factory;

@@ -17,6 +17,7 @@ import za.ac.cput.orderapps.domain.Order;
 import za.ac.cput.orderapps.service.IOrderService;
 import za.ac.cput.orderapps.service.OrderService;
 
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -41,7 +42,7 @@ public class OrderControllerTest {
         return new Order.Builder()
                 .setOrderId("1")
                 .setCustomerName(name)
-                .setDate(25/04/26)
+                .setDate(new Date())
                 .build();
     }
 

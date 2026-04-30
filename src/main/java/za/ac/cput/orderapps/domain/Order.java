@@ -15,7 +15,7 @@ public class Order {
     @Embedded
     private CustomerName customerName;
 
-   // private double amount;
+
     private Date date;
 
     private Order(Builder builder) {
@@ -45,10 +45,10 @@ public class Order {
             return this;
         }
 
-//        public Builder setDate(double date) {
-//            this.date = date;
-//            return this;
-//        }
+        public Builder setDate(Date date) {
+            this.date = date;
+            return this;
+        }
 
         public Order build() {
             if (orderId == null || orderId.isEmpty()) return null;

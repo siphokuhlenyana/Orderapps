@@ -14,7 +14,7 @@ import za.ac.cput.orderapps.service.CustomerService;
 
 import java.util.List;
 @RestController
-@RequestMapping("/api/order")
+@RequestMapping("/api/customers")
 public class CustomerController {
     private final CustomerService service;
 

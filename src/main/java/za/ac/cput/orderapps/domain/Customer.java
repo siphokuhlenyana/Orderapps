@@ -1,3 +1,9 @@
+/*
+Author : Siphokuhle Nyana
+25/04/26
+Customer.java
+ */
+
 package za.ac.cput.orderapps.domain;
 import jakarta.persistence.*;
 

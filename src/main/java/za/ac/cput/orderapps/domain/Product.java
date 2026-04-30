@@ -1,7 +1,7 @@
 /*
 Author : Siphokuhle Nyana
 29/04/26
-Product
+Product.java
  */
 
 

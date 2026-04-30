@@ -15,6 +15,7 @@ import za.ac.cput.orderapps.domain.CustomerName;
 import za.ac.cput.orderapps.domain.Order;
 import za.ac.cput.orderapps.repository.OrderRepository;
 
+import java.util.Date;
 import java.util.Optional;
 
 
@@ -38,7 +39,7 @@ public class OrderServiceTest {
         Order order = new Order.Builder()
                 .setOrderId("1")
                 .setCustomerName(name)
-                .setDate(25/04/26)
+                .setDate(new Date())
                 .build();
 
         Mockito.when(repository.findById("1")).thenReturn(Optional.of(order));

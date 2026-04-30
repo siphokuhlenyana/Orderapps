@@ -1,10 +1,10 @@
 /*
 Author : Siphokuhle Nyana
-29/04/26
+29/04/26 ---- Still under construction
 InStoreOrder
  */
 
 package za.ac.cput.orderapps.domain;
 
-public class InStoreOrder {
+public class InStoreOrder extends Order{
 }

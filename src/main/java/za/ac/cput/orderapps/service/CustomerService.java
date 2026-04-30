@@ -1,7 +1,7 @@
 /*
 Author : Siphokuhle Nyana
 25/04/26
-CustomerService
+CustomerService.java
  */
 package za.ac.cput.orderapps.service;
 
